@@ -7,7 +7,7 @@ const Shimmer = () => (
     </div>
 
     <div className="mt-6 w-full overflow-y-scroll">
-      {[1, 2, 3].map((_, index) => (
+      {[1, 2, 3, 4, 5].map((_, index) => (
         <div
           key={index}
           className="m-4 ml-32 h-32 w-9/12 bg-gray-300 shadow-md rounded-lg"

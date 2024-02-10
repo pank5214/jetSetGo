@@ -1,10 +1,10 @@
 import React from "react";
 import FlayInnImage from "../assets/flyinn.jpeg";
-import { ButtonYellowComp } from "./ButtonYellowComp";
-import FlightBookingFormComp from "./FlightBookingFormComp";
-import { HeaderNavComp } from "./HeaderNavComp";
+import ButtonYellow from "./ButtonYellow";
+import FlightBookingForm from "./FlightBookingForm";
+import HeaderNav from "./HeaderNav";
 
-export const HeaderComp = () => {
+const Header = () => {
   return (
     <div
       className="w-full h-[80%] bg-red-300 bg-contain"
@@ -12,11 +12,11 @@ export const HeaderComp = () => {
         backgroundImage: `url("${FlayInnImage}")`,
       }}
     >
-      <HeaderNavComp />
+      <HeaderNav />
       <div className="grid grid-cols-2 h-[80%]">
         <div className="flex p-5 items-center">
           <div>
-            <p className="text-white text-xl">FLYING BUDGET</p>
+            <p className="text-white text-xl">JET SET GO</p>
             <p className="text-white text-5xl">We Are Very Reliable</p>
             <p className="text-yellow-400 text-5xl">
               Professional, Experienced
@@ -29,13 +29,15 @@ export const HeaderComp = () => {
               full services airline offering{" "}
               <span className="text-yellow-400">reduce fairs.</span>
             </p>
-            <ButtonYellowComp label={"FIND FLIGHT"} extraStyle={"flex mt-5"} />
+            <ButtonYellow label={"FIND FLIGHT"} extraStyle={"flex mt-5"} />
           </div>
         </div>
         <div className="flex">
-          <FlightBookingFormComp />
+          <FlightBookingForm />
         </div>
       </div>
     </div>
   );
 };
+
+export default Header;

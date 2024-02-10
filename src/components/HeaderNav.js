@@ -1,12 +1,12 @@
 import React from "react";
 
-export const HeaderNavComp = () => {
+const HeaderNav = () => {
   return (
     <div className="grid grid-cols-4 gap-2">
       <div className="flex justify-center col-span-1 p-5 items-center">
         <div>
-          <p className="text-3xl font-bold text-white">Flyinn</p>
-          <p className="text-sm text-white text-center">BUDGET</p>
+          <p className="text-3xl font-bold text-white">Jet Set Go</p>
+          <p className="text-sm text-white text-center">FLIGHT</p>
         </div>
       </div>
       <div className="col-span-3 p-5 flex justify-center items-center">
@@ -44,3 +44,5 @@ export const HeaderNavComp = () => {
     </div>
   );
 };
+
+export default HeaderNav;

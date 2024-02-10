@@ -1,10 +1,10 @@
 import React from "react";
 import { LOWEST_FARE_LIST } from "../constants/AppConstants";
-import { ButtonYellowComp } from "./ButtonYellowComp";
+import  ButtonYellow from "./ButtonYellow";
 
-export const LowestFareComp = () => {
+ const LowestFare = () => {
   return (
-    <div className="relative h-[80%] px-20 py-20 bg-[#1a63a8]">
+    <div className="relative h-[40%] px-20 py-8 bg-[#1a63a8]">
       <p className="text-sm text-center text-white">CURRENT FARE</p>
       <p className="text-3xl mt-1 text-center text-white">
         Today's Lowest Fare
@@ -26,7 +26,7 @@ export const LowestFareComp = () => {
                 <span className="text-gray-400">Starting from</span>{" "}
                 <span className="text-red-400 font-semibold">{item.price}</span>
               </p>
-              <ButtonYellowComp label={"CHECK OUT NOW"} extraStyle={"mt-5"} />
+              <ButtonYellow label={"CHECK OUT NOW"} extraStyle={"mt-5"} />
             </div>
           );
         })}
@@ -34,3 +34,5 @@ export const LowestFareComp = () => {
     </div>
   );
 };
+
+export default LowestFare;

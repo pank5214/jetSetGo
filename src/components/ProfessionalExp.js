@@ -1,10 +1,10 @@
 import React from "react";
-import { ButtonYellowComp } from "./ButtonYellowComp";
+import  ButtonYellow from "./ButtonYellow";
 import FlyImage from "../assets/fly.jpeg";
 
-export const ProfessionalExpComp = () => {
+const ProfessionalExp = () => {
   return (
-    <div className="h-[80%] px-20 py-[140px]">
+    <div className="h-[65%] px-20 py-[140px]">
       <div className="grid grid-cols-2 gap-5 h-[90%]">
         <div className="flex justify-center">
           <div
@@ -40,10 +40,12 @@ export const ProfessionalExpComp = () => {
             only five centuries,
           </p>
           <div className="flex">
-            <ButtonYellowComp label={"Read More"} extraStyle={"mt-10"} />
+            <ButtonYellow label={"Read More"} extraStyle={"mt-10"} />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default ProfessionalExp;

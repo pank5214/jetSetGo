@@ -1,46 +1,36 @@
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
-import {
-  AiFillTwitterCircle,
-  AiFillInstagram,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import { Email_Link } from "../constants/AppConstants";
+import SocialMedia from "./SocialMedia";
 
-export const FooterComp = () => {
+const Footer = () => {
   return (
-    <div className="h-[50%] px-20 py-5 bg-slate-600">
-      <div className="grid grid-cols-4 gap-10 text-white h-[80%]">
+    <div className="h-[34%] px-20 bg-slate-600">
+      <div className="grid grid-cols-4 py-5 gap-10 text-white h-[80%]">
         <div>
-          <p className="text-2xl font-bold">Fiyinn</p>
-          <p className="text-sm">BUDGET</p>
+          <p className="text-2xl font-bold">Get Set Go</p>
+          <p className="text-sm">FLIGHT</p>
           <p className="mt-5 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum{" "}
           </p>
-          <div className="flex h-14 items-center">
-            <a href="#">
-              <BsFacebook size={20} />
-            </a>
-            <a href="#">
-              {" "}
-              <AiFillTwitterCircle size={20} className="ml-2" />
-            </a>
-            <a href="#">
-              {" "}
-              <AiFillInstagram size={20} className="ml-2" />
-            </a>
-            <a href="#">
-              {" "}
-              <AiFillLinkedin size={20} className="ml-2" />
-            </a>
-          </div>
+          <SocialMedia />
         </div>
         <div>
           <p className="text-2xl font-bold">Get in Touch</p>
           <p className="text-sm">BUDGET</p>
           <div className="items-center mt-10">
             <p className="text-sm ml-2">Phone: +91-9829343601</p>
-            <p className="text-sm ml-2">Email: info@gmail.com</p>
+            <span className="text-sm ml-2 m-1 flex text-center">
+              Email:
+              <a
+                href={Email_Link}
+                className="w-22 h-22 ml-1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                pankajkumar5214@gmail.com
+              </a>
+            </span>
           </div>
         </div>
         <div>
@@ -59,10 +49,12 @@ export const FooterComp = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between w-full text-white mt-10 text-sm h-[10%]">
-        <p>All Rights Reserved</p>
+      <div className="flex justify-between w-full text-white text-sm">
+        <p>All Rights Reserved | © 2022 GetSetGo Flight</p>
         <p>Terms and Conditions - Privacy policy</p>
       </div>
     </div>
   );
 };
+
+export default Footer;

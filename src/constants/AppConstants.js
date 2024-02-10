@@ -31,3 +31,10 @@ export const LOWEST_FARE_LIST = [
 ];
 
 export const AIRLINES_API = "https://api.npoint.io/4829d4ab0e96bfab50e7";
+
+// Social Media Links
+export const Linkedin_Link = "https://www.linkedin.com/in/pankaj5214/";
+export const Twitter_Link = "https://twitter.com/pankajkumar5214";
+export const Github_Link = "https://github.com/pank5214";
+export const Email_Link = "mailto:pankajkumar5214@gmail.com";
+export const INSTAGRAM_LINK = "https://www.instagram.com/_._r0cky_._/";

@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { AIRLINES_API } from "../constants/AppConstants";
 
-const InputTextComp = ({
+const AutoSuggestInput = ({
   placeholder,
   suggestionsKey,
   image,
   extraStyle,
   label,
   required,
-  value, // Value prop to receive the state
-  onChange, // Callback prop to update the state
+  searchValue,
+  setSearchValue,
 }) => {
-  const [searchValue, setSearchValue] = useState(value || "");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -20,19 +19,19 @@ const InputTextComp = ({
       getAutoSuggestions();
     }, 2000);
     return () => clearTimeout(timer);
-  }, [searchValue, onChange]);
+  }, [searchValue]);
 
   const getAutoSuggestions = async () => {
     const data = await fetch(AIRLINES_API);
     const json = await data.json();
-    // console.log("json:", json);
-    // console.log("json:", json?.data?.result);
     setSuggestions(json?.data?.result);
   };
-  console.log("searchValue:", searchValue);
+
   return (
     <div className="relative">
-      <div className={`flex border border-gray-300 px-3 py-3 ${extraStyle}`}>
+      <div
+        className={`flex border border-gray-300 px-3 py-4 rounded-lg shadow-md ${extraStyle}`}
+      >
         <div className="border-r-gray-300 border-r-[1px] pr-4 rounded-sm">
           {image}
         </div>
@@ -43,11 +42,10 @@ const InputTextComp = ({
           value={searchValue}
           onChange={(e) => {
             setSearchValue(e.target.value);
-            onChange(e.target.value);
           }}
           onFocus={() => setShowSuggestions(true)}
           onBlur={() => setShowSuggestions(false)}
-          required
+          required={required}
         />
         <p className="text-sm text-gray-300">{label}</p>
 
@@ -85,4 +83,4 @@ const InputTextComp = ({
   );
 };
 
-export default InputTextComp;
+export default AutoSuggestInput;
