@@ -53,7 +53,7 @@ const ShowFlightDetails = ({ onClose, sourceCity, destinationCity }) => {
                   key={booking?.id}
                   className="m-4 ml-32 h-28 flex justify-center w-10/12 bg-gray-300 shadow-md rounded-lg cursor-pointer"
                 >
-                  <div className="flex flex-col justify-center px-6 rounded-xl shadow-slate-500 shadow-md text-center text-slate-600">
+                  <div className="flex flex-col justify-center px-6 -ml-[58px] rounded-xl shadow-slate-500 shadow-md text-center text-slate-600">
                     <h1 className="font-bold text-lg">
                       {booking?.displayData?.airlines?.[0]?.airlineName}
                     </h1>
