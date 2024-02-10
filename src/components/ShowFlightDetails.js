@@ -62,7 +62,7 @@ const ShowFlightDetails = ({ onClose, sourceCity, destinationCity }) => {
                       {booking?.displayData?.airlines?.[0]?.flightNumber}
                     </h6>
                   </div>
-                  <div className="flex items-center m-4 gap-52">
+                  <div className="flex items-center gap-48">
                     <div className="ml-9 text-center">
                       <h2 className="font-bold text-base">
                         <TimeConverter
